@@ -27,5 +27,4 @@ class SwiftWebVCActivitySafari : SwiftWebVCActivity {
         let completed: Bool = UIApplication.shared.openURL(URLToOpen! as URL)
         activityDidFinish(completed)
     }
-    
 }
