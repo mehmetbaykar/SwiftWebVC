@@ -11,7 +11,7 @@ import UIKit
 public class SwiftModalWebVC: UINavigationController {
     
     public enum SwiftModalWebVCTheme {
-        case lightBlue, lightBlack, dark
+        case lightBlue, lightBlack, dark, game
     }
     public enum SwiftModalWebVCDismissButtonStyle {
         case arrow, cross
@@ -46,7 +46,7 @@ public class SwiftModalWebVC: UINavigationController {
         
         let dismissButtonImageName = (dismissButtonStyle == .arrow) ? "SwiftWebVCDismiss" : "SwiftWebVCDismissAlt"
         let doneButton = UIBarButtonItem(image: SwiftWebVC.bundledImage(named: dismissButtonImageName),
-                                         style: UIBarButtonItemStyle.plain,
+                                         style: UIBarButtonItem.Style.plain,
                                          target: webViewController,
                                          action: #selector(SwiftWebVC.doneButtonTapped))
         
@@ -66,6 +66,11 @@ public class SwiftModalWebVC: UINavigationController {
             webViewController.buttonColor = UIColor.white
             webViewController.titleColor = UIColor.groupTableViewBackground
             UINavigationBar.appearance().barStyle = UIBarStyle.black
+        case .game:
+            doneButton.tintColor = UIColor.white
+            webViewController.buttonColor =  .white
+            webViewController.titleColor = #colorLiteral(red: 0.9607843137, green: 0.737254902, blue: 0.2941176471, alpha: 1)
+            UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.05882352941, green: 0.3176470588, blue: 0.2941176471, alpha: 1)
         }
         
         if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
