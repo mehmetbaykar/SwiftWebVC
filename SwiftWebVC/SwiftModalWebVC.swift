@@ -93,4 +93,12 @@ public class SwiftModalWebVC: UINavigationController {
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
     }
+    
+    public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        .portrait
+    }
+    
+    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        .portrait
+    }
 }
