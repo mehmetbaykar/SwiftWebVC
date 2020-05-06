@@ -67,9 +67,9 @@ public class SwiftModalWebVC: UINavigationController {
             webViewController.titleColor = UIColor.groupTableViewBackground
             UINavigationBar.appearance().barStyle = UIBarStyle.black
         case .game:
-            doneButton.tintColor = UIColor.white
-            webViewController.buttonColor =  .white
-            webViewController.titleColor = #colorLiteral(red: 0.9607843137, green: 0.737254902, blue: 0.2941176471, alpha: 1)
+            doneButton.tintColor = #colorLiteral(red: 0.07450980392, green: 0.262745098, blue: 0.4078431373, alpha: 1)
+            webViewController.buttonColor =  #colorLiteral(red: 0.07450980392, green: 0.262745098, blue: 0.4078431373, alpha: 1)
+            webViewController.titleColor = #colorLiteral(red: 1, green: 0.8941176471, blue: 0.3764705882, alpha: 1)
             UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.05882352941, green: 0.3176470588, blue: 0.2941176471, alpha: 1)
         }
         
